@@ -83,7 +83,7 @@ export default function Home() {
             </Row>
             <ListCard>
                 {filteredOpportunities.length > 0 && filteredOpportunities.map((opportunity, index) => (
-                    <Card.Root>
+                    <Card.Root key={index}>
                         <Card.Top>
                             <Card.Title>{opportunity.titulo}</Card.Title>
                             <Card.Time time={"2024-01-23"} />

@@ -23,14 +23,14 @@ export default function FormVaga() {
             estado,
             resposavel,
             auxilio: auxilioInicial === "s",
-            contato,
+            telefone: contato,
             email
         };
 
         try {
             const response = await fetch(REACT_APP_API_URL + "/oportunidade", {
                 method: "POST",
-                body: JSON.stringify(data)
+                body: JSON.stringify(data),
             });
         } catch (error) {
             console.error("Erro ao buscar vagas");
